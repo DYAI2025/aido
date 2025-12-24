@@ -3,10 +3,11 @@ import { AgentNetwork } from './components/AgentNetwork/AgentNetwork';
 import { DecisionMaking } from './components/DecisionMaking/DecisionMaking';
 import { ConsensusAlgorithm } from './components/ConsensusAlgorithm/ConsensusAlgorithm';
 import { TaskAllocation } from './components/TaskAllocation/TaskAllocation';
+import { TaskBoard } from './components/TaskBoard/TaskBoard';
 import { PerformanceMonitoring } from './components/PerformanceMonitoring/PerformanceMonitoring';
 import './App.css';
 
-type View = 'agents' | 'decisions' | 'consensus' | 'tasks' | 'performance';
+type View = 'agents' | 'decisions' | 'consensus' | 'tasks' | 'board' | 'performance';
 
 export const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>('agents');
@@ -42,6 +43,12 @@ export const App: React.FC = () => {
             Task Allocation
           </button>
           <button
+            className={currentView === 'board' ? 'active' : ''}
+            onClick={() => setCurrentView('board')}
+          >
+            Task Board
+          </button>
+          <button
             className={currentView === 'performance' ? 'active' : ''}
             onClick={() => setCurrentView('performance')}
           >
@@ -66,7 +73,11 @@ export const App: React.FC = () => {
         {currentView === 'tasks' && (
           <TaskAllocation />
         )}
-        
+
+        {currentView === 'board' && (
+          <TaskBoard />
+        )}
+
         {currentView === 'performance' && (
           <PerformanceMonitoring />
         )}

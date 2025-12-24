@@ -24,8 +24,9 @@ export interface Task {
   id: string;
   description: string;
   assignedAgentId: string;
-  status: 'pending' | 'assigned' | 'in_progress' | 'completed';
+  status: 'pending' | 'assigned' | 'in_progress' | 'review' | 'completed';
   createdAt: Date;
+  priority?: number; // Lower number = higher priority (1 is highest)
 }
 
 export interface AgentWorkload {
@@ -73,6 +74,9 @@ export interface IDatabaseService {
   saveTask(description: string, agentId: string, explanation: string): Promise<Task>;
   getAgentWorkload(agentId: string): Promise<AgentWorkload>;
   getPerformanceMetrics(dateRange?: DateRange): Promise<PerformanceMetrics>;
+  getAllTasks(): Promise<Task[]>;
+  updateTaskStatus(taskId: string, status: Task['status']): Promise<Task>;
+  updateTaskPriority(taskId: string, priority: number): Promise<Task>;
 }
 
 export class DatabaseService implements IDatabaseService {
@@ -118,6 +122,21 @@ export class DatabaseService implements IDatabaseService {
 
   async getPerformanceMetrics(dateRange?: DateRange): Promise<PerformanceMetrics> {
     // In a real implementation, this would calculate metrics from the database
+    throw new Error('Not implemented');
+  }
+
+  async getAllTasks(): Promise<Task[]> {
+    // In a real implementation, this would fetch all tasks from the database
+    throw new Error('Not implemented');
+  }
+
+  async updateTaskStatus(taskId: string, status: Task['status']): Promise<Task> {
+    // In a real implementation, this would update the task status in the database
+    throw new Error('Not implemented');
+  }
+
+  async updateTaskPriority(taskId: string, priority: number): Promise<Task> {
+    // In a real implementation, this would update the task priority in the database
     throw new Error('Not implemented');
   }
 }
