@@ -2,6 +2,17 @@
 
 The AI-Driven Decentralized Organization (AIDO) is a concept that leverages artificial intelligence to enable autonomous and distributed decision-making without relying on traditional blockchain or cryptocurrency frameworks. Unlike conventional Decentralized Autonomous Organizations (DAOs) that depend on blockchain technology for transparency and security, AIDO harnesses a network of specialized AI agents to collaboratively manage operations, make strategic decisions, and allocate tasks efficiently.
 
+## 🚀 Quick Start
+
+**One-Click Startup:**
+
+- **macOS**: Double-click `start.command`
+- **Linux**: Double-click `AIDO.desktop` or run `./start.sh`
+
+For detailed instructions, see [QUICKSTART.md](QUICKSTART.md)
+
+---
+
 At the core of AIDO lies a diverse set of AI agents, each equipped with unique expertise in areas such as finance, operations, strategy, and human resources. These agents interact through a sophisticated distributed decision-making system, where proposals are generated, evaluated, and voted upon using advanced machine learning algorithms and natural language processing. 
 
 A robust consensus mechanism ensures that decisions reflect the collective intelligence of the network, while automated task allocation optimizes workflow based on agent capabilities and workload.

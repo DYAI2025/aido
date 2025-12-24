@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AIDO
+Comment=Start AIDO - AI-Driven Decentralized Organization
+Exec=/home/user/aido/start.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Development;
+Path=/home/user/aido
+StartupNotify=true
